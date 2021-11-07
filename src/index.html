@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+
+  <body>
+    <div class="splitter">
+      <h3 class="splitter__title">SPLITTER</h3>
+    </div>
+
+    <div class="card flex-md-row">
+      <div class="form flex-md-fr">
+        <div class="form__control">
+          <div class="form__control--label">
+            <label for="bill" class="form__label">Bill</label>
+            <div class="form__msg"></div>
+          </div>
+          <div class="form__control--icon">
+            <img class="form__icon" src="<%=
+            require("../src/assets/images/icon-dollar.svg")%>"
+            alt="icon-dollar">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="0"
+              id="billtInput"
+            />
+          </div>
+        </div>
+        <div class="form__control">
+          <div class="form__control--label">
+            <label for="tip" class="form__label">Select Tip %</label>
+            <div class="form__msg"></div>
+          </div>
+          <ul class="form__select" id="tipSelection">
+            <li>
+              <button type="button" class="btn btn--primary" data-tipvalue="5">
+                5%
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn--primary" data-tipvalue="10">
+                10%
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn--primary" data-tipvalue="15">
+                15%
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn--primary" data-tipvalue="25">
+                25%
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn--primary" data-tipvalue="50">
+                50%
+              </button>
+            </li>
+            <li>
+              <input type="text" class="form__input" placeholder="Custom" id="customTipValue" />
+            </li>
+          </ul>
+        </div>
+        <div class="form__control">
+          <div class="form__control--label">
+            <label for="people" class="form__label">Number of People</label>
+            <div class="form__msg"></div>
+          </div>
+          <div class="form__control--icon">
+            <img class="form__icon" src="<%=
+            require("../src/assets/images/icon-person.svg")%>"
+            alt="icon-dollar">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="0"
+              id="peopletInput"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card card--highlight flex-md-fr flex-md-col">
+        <div class="tip-contorl">
+          <div class="tip-wrapper">
+            <div class="tip-label">Tip Amount</div>
+            <small class="tip-sublabel">/ person</small>
+          </div>
+          <div class="tip-value">$<span id="tipAmount">0.00</span></div>
+        </div>
+        <div class="tip-contorl">
+          <div class="tip-wrapper">
+            <div class="tip-label">Total</div>
+            <small class="tip-sublabel">/ person</small>
+          </div>
+          <div class="tip-value">$<span id="tipTotal">0.00</span></div>
+        </div>
+        <div class="tip-contorl flex-col--end">
+          <button class="btn btn--secondary" type="button" disabled id="resetBtn">
+            RESET
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Gazentia/Gazentia">Gazentia</a>.
+    </div>
+  </body>
+</html>

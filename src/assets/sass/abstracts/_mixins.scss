@@ -1,0 +1,24 @@
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+@mixin disabledButton($bgColor, $fontColor) {
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+
+    &:hover {
+      background-color: $bgColor;
+      color: $fontColor;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.tip {
+  &-contorl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &-label {
+    color: $white;
+    font-size: $font-sm;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  &-sublabel {
+    font-size: $font-xs;
+    color: $darkGrayisyan;
+    font-weight: 700;
+  }
+  &-value {
+    font-size: $font-lg;
+    font-weight: 700;
+    color: $strongCyan;
+    @include breakpoint-up(medium) {
+      font-size: $font-xl;
+    }
+  }
+}

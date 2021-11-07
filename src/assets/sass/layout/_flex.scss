@@ -1,0 +1,45 @@
+.flex {
+  &-col {
+    &--start {
+      margin-bottom: auto;
+    }
+    
+    &--end {
+      margin-top: auto;
+    }
+  }
+
+  &-md {
+    &-row {
+      @include breakpoint-up(medium) {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 100%;
+      }
+      @include breakpoint-up(large) {
+        max-width: 50%;
+      }
+    }
+    &-col {
+      @include breakpoint-up(medium) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-fr {
+      flex: 0 1 50%;
+      margin-right: 0;
+      margin-bottom: 40px;
+
+      @include breakpoint-up(medium) {
+        margin-right: 25px;
+      }
+      &:last-of-type {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

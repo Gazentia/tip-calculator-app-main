@@ -1,0 +1,46 @@
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: $font-lg;
+  width: 100%;
+  padding: 14px 0;
+  border: 0;
+  cursor: pointer;
+
+  @include breakpoint-up(large) {
+    font-size: $font-md;
+    padding: 14px 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    background-color: $btn-primary;
+    color: $white;
+    transition: all 200ms ease-in-out;
+
+    &:hover,
+    &.active {
+      background-color: $btn-primary-hover;
+      color: $veryDarkCyan;
+    }
+    @include disabledButton($btn-primary, $white);
+  }
+
+  &--secondary {
+    background-color: $btn-secondary;
+    color: $veryDarkCyan;
+    transition: all 200ms ease-in-out;
+
+    &:hover,
+    &.active {
+      background-color: $btn-secondary-hover;
+      color: $veryDarkCyan;
+    }
+    @include disabledButton($btn-secondary, $veryDarkCyan);
+  }
+}

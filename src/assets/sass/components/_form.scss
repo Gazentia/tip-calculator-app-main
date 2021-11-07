@@ -1,0 +1,101 @@
+.form {
+  &__control {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-up(medium) {
+      margin-bottom: 24px;
+    }
+
+    &--icon {
+      position: relative;
+      .form__input {
+        padding-left: 30px;
+      }
+    }
+    &--label {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 12px;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    @include breakpoint-up(large) {
+      width: 9px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: $font-xs;
+  }
+
+  &__input {
+    text-align: right;
+    padding: 14px 16px;
+    border-radius: 5px;
+    font-size: $font-md;
+    font-weight: 700;
+    width: 100%;
+    border: 2px solid $lightGrayishCyan2;
+    background-color: $lightGrayishCyan2;
+    color: $veryDarkCyan;
+
+    @include breakpoint-up(large) {
+      font-size: $font-sm;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--valid {
+      border-color: $strongCyan;
+    }
+
+    &--invalid {
+      border-color: $lightRed;
+    }
+  }
+
+  &__select {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 18px;
+    grid-row-gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 7px;
+      grid-row-gap: 9px;
+    }
+
+    .form__input {
+      @include breakpoint-up(large) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__msg {
+    display: inline-block;
+    font-weight: 700;
+    font-size: $font-xs;
+    color: $lightRed;
+  }
+}

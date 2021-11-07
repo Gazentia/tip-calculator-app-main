@@ -1,0 +1,39 @@
+// Colors
+$bgColor: #C5E5E7;
+$strongCyan: hsl(172, 67%, 45%);
+$veryDarkCyan: hsl(183, 100%, 15%);
+$darkGrayisyan: hsl(186, 14%, 43%);
+$darkGrayishCyan: hsl(184, 14%, 56%);
+$lightGrayishCyan1: hsl(185, 41%, 84%);
+$lightGrayishCyan2: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+$lightRed: #B77E74;
+
+//button color
+$btn-primary: $veryDarkCyan; 
+$btn-primary-hover: $strongCyan; 
+$btn-secondary: $strongCyan; 
+$btn-secondary-hover: #9FE8DF;
+
+// Font Sizes
+$font-xs: 0.75rem; // 12px
+$font-sm: 0.875rem; // 14px
+$font-md: 1.125rem; //18px
+$font-lg: 1.5rem; // 24px
+$font-xl: 2.125rem; // 34px
+$font-xlg: 3.25rem; // 52px
+
+// Breakpoints
+// 640px, 1024px, 1400px
+$breakpoints-up: (
+  "medium": "40rem",
+  "large": "64rem",
+  "xlarge": "87.5rem",
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down: (
+  "small": "39.9375rem",
+  "medium": "63.9375rem",
+  "large": "87.4375rem",
+);
